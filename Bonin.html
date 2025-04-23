@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Korn Bonin</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <script
+      src="https://kit.fontawesome.com/4e26c2294b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Top NavBar -->
+    <nav id="top-nav">
+      <div class="brand">
+        <i class="fa-solid fa-grip"></i>
+        <span>To Do</span>
+      </div>
+
+      <div class="search-bar">
+        <i
+          class="search-icon fa-solid fa-magnifying-glass"
+          style="color: #000205"
+        ></i>
+        <input type="text" placeholder="search..." />
+      </div>
+
+      <div class="nav-util">
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid fa-question"></i>
+        <i class="fa-solid fa-bell"></i>
+        <img src="img/photo.jpg" />
+      </div>
+    </nav>
+
+    <div id="app">
+      <!-- Left Nav -->
+      <nav id="left-nav">
+        <div class="mune">
+          <span>
+            <i class="hamber fa-solid fa-bars"></i>
+          </span>
+          <ul>
+            <li class="home" onclick="display('myday')">
+              <i class="fa-sharp fa-solid fa-sun" style="color: #0d56d3"></i>
+              <span class="txt-mune">My Day</span>
+            </li>
+            <li class="home" onclick="display('important')">
+              <i class="fa-regular fa-star" style="color: #400dd9"></i>
+              <span class="txt-mune">Important</span>
+            </li>
+            <li class="home" onclick="display('planned')">
+              <i class="fa-regular fa-calendar-days" style="color: #05368a"></i>
+              <span class="txt-mune">Planned</span>
+            </li>
+            <li class="home" onclick="display('assigned')">
+              <i class="fa-solid fa-user" style="color: #032a6d"></i>
+              <span class="txt-mune">Assigned to me</span>
+            </li>
+            <li class="home" onclick="display('task')">
+              <i class="fa-sharp fa-solid fa-house" style="color: #082963"></i>
+              <span class="txt-mune">Task</span>
+            </li>
+          </ul>
+          <div class="line">
+            <hr />
+          </div>
+          <div class="add-new">
+            <i class="add-newicon fa-solid fa-plus" style="color: #0743ab"></i>
+            <input type="text" placeholder="New List" />
+          </div>
+        </div>
+        <div class="footer-left">
+          <ul>
+            <li class="btnoffice"><i class="font-size1 fa-solid fa-envelope"></i></li>
+            <li class="btnoffice"><i class="font-size1 fa-solid fa-calendar"></i></li>
+            <li class="btnoffice"><i class="font-size1  fa-solid fa-user"></i></li>
+            <li class="btnoffice"><i class="font-size1 fa-solid fa-file"></i></li>
+            <li class="btnoffice"><i class="font-size1 fa-solid fa-check"></i></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Main Body -->
+      <div class="main-body">
+        <div class="navbar-main"> 
+            <div class="tasktoolbar-left">
+            <div class="taskbar">
+              <ul>
+                <li class="taskbar-left">
+                  <span class="txt-left" id="show"><i class="fa-sharp fa-solid fa-sun"></i>My Day</span>
+                </li>
+                <li class="taskbar-left">
+                  <span class="txt-list">...</span>
+                </li>
+                <li class="task-nav">
+                  <span class="txt-left"><i class="fa-solid fa-grip-vertical"></i>Grid</span>
+                </li>
+                <li class="task-nav">
+                  <span class="txt-left"><i class="fa-solid fa-list"></i>List</span>
+                </li>
+              </ul>
+            </div>
+            <div class="date">
+              <p>Wednesday,April 2</p>
+            </div>
+          </div>
+               <div class="tasktoolbar-right">
+                <ul>
+                  <li class="toolbar">
+                    <span class="txt-bar"> <i class="font-toobar fa-solid fa-sort"></i>Sort</span>
+                  </li>
+                  <li class="toolbar">
+                    <span class="txt-bar"> <i class="font-toobar fa-regular fa-object-group"></i>Group</span>
+                  </li>
+                  <li class="toolbar">
+                    <span class="txt-bar">  <i class="font-toobar-1 fa-regular fa-lightbulb"></i>Suggestion</span>
+                  </li>
+                </ul>
+               </div>
+          </div>
+        <div class="base-task1">
+            <input class="checking" type="checkbox">
+            <input class="inputt" type="text" id="task-input" placeholder="Add a task" />
+            <button class="btnadd" onclick="additem()" >Add</button>
+        </div>
+        <div class="base-task">
+          <div class="base-task2" id="task-list">
+        </div>
+        </div>
+      <u></u>
+    </div>
+  </body>
+</html>
